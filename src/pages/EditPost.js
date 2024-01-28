@@ -11,7 +11,7 @@ export default function EditPost() {
   const [redirect,setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch('https://blog-64s5.onrender.com/'+id)
+    fetch('https://blog-64s5.onrender.com/post/'+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);
