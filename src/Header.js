@@ -6,7 +6,7 @@ import './App.css'
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('https://blog-64s5.onrender.com/profile', {
+    fetch('https://blog-backend-auth-alpha.vercel.app/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -16,7 +16,7 @@ export default function Header() {
   }, []);
 
   function logout() {
-    fetch('https://blog-64s5.onrender.com/logout', {
+    fetch('https://blog-backend-auth-alpha.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     });
